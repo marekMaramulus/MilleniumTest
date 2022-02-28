@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+/bin/Debug/net6.0
+/obj/Container
+/obj/Debug/net6.0
+/obj
