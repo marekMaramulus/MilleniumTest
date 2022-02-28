@@ -5,7 +5,7 @@ namespace MilleniumTest.Controllers
 {
     public abstract class MilleniumController : ControllerBase
     {
-        public IActionResult MapResult(ResultCodes code)
+        protected IActionResult MapResult(ResultCodes code)
         {
             switch (code)
             {

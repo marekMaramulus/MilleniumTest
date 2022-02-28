@@ -5,7 +5,7 @@ using MilleniumTest.Services;
 
 namespace MilleniumTest.Controllers
 {
-    [ApiController]
+    //[ApiController]
     [Route("[controller]")]
     public class TodoController : MilleniumController
     {
@@ -60,12 +60,8 @@ namespace MilleniumTest.Controllers
         public IActionResult Update([FromBody] TodoItem item)
         {
             var resultCode = _todoService.Update(item);
-            if (resultCode < 0)
-            {
-                return MapResult(resultCode);
-            }
-
-            return NoContent();
+            
+            return MapResult(resultCode);
         }
     }
 }
