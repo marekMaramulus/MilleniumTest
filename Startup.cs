@@ -15,8 +15,9 @@ public class Startup
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
-        services.AddTransient<IWeatherService, WeatherService>();
-        services.AddTransient<IWeatherRepository, WeatherRepository>();
+        services.AddTransient<ITodoService, TodoService>();
+        services.AddTransient<ITodoRepository, TodoRepository>();
+        services.AddSingleton<IStorageStub, StorageStub>();
     }
 
     public void Configure(WebApplication app, IWebHostEnvironment env)
